@@ -46,9 +46,6 @@ def handle_connection(cfd, cli_address):
 	output_orig = os.popen("./orig", "r").read()
 	f.close()
 
-	print(output_cli)
-	print(output_orig)
-
 	if output_cli == output_orig:
 		cfd.send("Success".encode())
 	else:
